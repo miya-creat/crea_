@@ -1,1 +1,0 @@
-setTimeout(()=>{console.log("깍꿍")},5000)
