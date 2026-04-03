@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumin Aria | Genius Artist</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Pretendard:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --gold:#c6a96b;
+    --dark:#0b0b0d;
+    --soft:#111114;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Pretendard', sans-serif;
+    background:var(--dark);
+    color:#ddd;
+    line-height:1.7;
+}
+
+h1,h2,h3{
+    font-family:'Playfair Display', serif;
+    letter-spacing:1px;
+}
+
+a{
+    text-decoration:none;
+    color:var(--gold);
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* ===== HERO ===== */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 5%;
+    background:linear-gradient(to right, #000 40%, rgba(0,0,0,0.3)),
+               url('images/hero.jpg') center/cover no-repeat;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:64px;
+    color:var(--gold);
+}
+
+.hero-text p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 28px;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--gold);
+    color:#000;
+}
+
+/* ===== NAV ===== */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:220px;
+    background:#000;
+    padding:40px 30px;
+    border-right:1px solid #222;
+}
+
+.logo{
+    font-family:'Playfair Display', serif;
+    font-size:28px;
+    color:var(--gold);
+    margin-bottom:50px;
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav li{
+    margin-bottom:20px;
+}
+
+nav a{
+    color:#aaa;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/* ===== CONTENT OFFSET ===== */
+main{
+    margin-left:220px;
+}
+
+/* ===== WORKS ===== */
+.section{
+    padding:100px 5%;
+}
+
+.section-title{
+    font-size:32px;
+    color:var(--gold);
+    margin-bottom:40px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:var(--soft);
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card-info{
+    padding:20px;
+}
+
+.card-info h3{
+    color:var(--gold);
+    margin-bottom:8px;
+}
+
+/* ===== ABOUT ===== */
+.about{
+    display:flex;
+    gap:60px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.about img{
+    width:300px;
+    border:1px solid var(--gold);
+}
+
+.about-text{
+    max-width:600px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid #222;
+    font-size:14px;
+    color:#777;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    nav{
+        position:relative;
+        width:100%;
+        height:auto;
+        border-right:none;
+        border-bottom:1px solid #222;
+    }
+
+    main{
+        margin-left:0;
+    }
+
+    .hero{
+        height:auto;
+        padding:120px 5%;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Lumin Aria</div>
+    <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#works">GALLERY</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>LUMIN ARIA</h1>
+        <p>경계를 넘어, 예술로 영원을 그리다.<br>
+        빛과 어둠 사이에서 새로운 세계를 창조합니다.</p>
+        <a href="#works" class="btn">EXPLORE GALLERY</a>
+    </div>
+</section>
+
+<section id="works" class="section">
+    <h2 class="section-title">LATEST WORKS</h2>
+    <div class="gallery">
+        <div class="card">
+            <img src="images/work1.jpg">
+            <div class="card-info">
+                <h3>Eternal Light</h3>
+                <p>2024 · Oil on Canvas</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/work2.jpg">
+            <div class="card-info">
+                <h3>Nebula Dream</h3>
+                <p>2024 · Mixed Media</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/work3.jpg">
+            <div class="card-info">
+                <h3>The Lost Harmony</h3>
+                <p>2023 · Digital Painting</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/work4.jpg">
+            <div class="card-info">
+                <h3>Into the Silence</h3>
+                <p>2023 · Acrylic</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2 class="section-title">ABOUT</h2>
+    <div class="about">
+        <img src="images/profile.jpg">
+        <div class="about-text">
+            <p>
+            예술은 곧 나의 호흡이자 존재입니다.<br>
+            현실과 환상의 경계에서 감정과 빛을 조형합니다.<br><br>
+            회화, 디지털 아트, 설치미술을 넘나들며
+            감각과 사유의 새로운 질서를 탐구합니다.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2 class="section-title">CONTACT</h2>
+    <p>Email: luminaria@email.com</p>
+    <p>Instagram | YouTube | Artstation</p>
+</section>
+
+<footer>
+    © 2026 Lumin Aria. All Rights Reserved.
+</footer>
+
+</main>
+
+</body>
+</html>
